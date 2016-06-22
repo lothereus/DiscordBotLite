@@ -1,2 +1,2 @@
 # DiscordBotLite
-DiscordBot with minimal functionalities
+DiscordBot (https://github.com/lothereus/DiscordBot) with minimal functionalities

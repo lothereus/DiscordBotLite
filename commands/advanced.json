@@ -1,0 +1,31 @@
+{
+    "hardware": {
+        "description": "link la config de Lastwolf",
+        "file": "hardware.jpg"
+    },
+    "planning": {
+        "usage": "",
+        "alias": "twitch planning lastwolfplay",
+        "description": "récupère le planning de Lastwolf"
+    },
+    "stream": {
+        "usage": "",
+        "alias": "twitch online lastwolfplay",
+        "description": "info sur le stream twitch de Lastwolf"
+    },
+    "nvstream": {
+        "usage": "",
+        "alias": "twitch online nvidiafrance",
+        "description": "info sur le stream twitch de nvidiafrance"
+    },
+    "wolftweet": {
+        "usage": "",
+        "alias": "twitter lasttweet lastwolfplays",
+        "description": "lasttweet de Lastwolf"
+    },
+    "divitweet": {
+        "usage": "",
+        "alias": "twitter lasttweet thedivisiongame",
+        "description": "lasttweet de thedivision"
+    }
+}
