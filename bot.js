@@ -206,48 +206,15 @@ mybot.on("message", function(message) {
                 console.log("Empty command "+user_cmd.name+": "+JSON.stringify(command));
             }
         }
-    } else if(input.indexOf(mybot.user.mention()) == 0) {
-
-        // BOT DIALOGS
-        // Bot is mentioned at beginning
-        //console.log("user "+message.author+" is speaking with Bot");
-        try {
-            var user_cmd = {};
-            user_cmd.mention = input.split(" ")[0];
-            user_cmd.first = input.split(" ")[1];
-            user_cmd.content = input.substring(mybot.user.mention().length+1);
-
-            //console.log("user said '"+user_cmd.content+"'");
-            // do something ?
-
-        } catch(e) { //no command
-            mybot.reply(message, "Oui ?");
-        }
-
     } else if(message.isMentioned(mybot.user)
         || input.toLowerCase().indexOf(mybot.user.username.toLowerCase()) >= 0
         || input.toLowerCase().indexOf(" bot ") >= 0) {
 
         // BOT MENTIONED
-        // Bot is mentioned elsewhere
         //console.log("user "+message.author+" mentioned Bot");
         mybot.sendMessage(message.channel, "On parle de moi ? :smile:");
 
-    } else if(input.length >= 2 && input.length <= 72) {
-
-        // BOT REACTS
-        //console.log("bot could react to user "+message.author+" message");
-        var dialogs = require("./dialogs/main.json");
-        for(intro in dialogs) {
-            //if(input.toLowerCase().indexOf(intro) >= 0) {
-            if(input.toLowerCase() == intro) {
-                var answer = dialogs[intro];
-                mybot.reply(message, answer.message);
-                break;
-            }
-        }
     }
-    // bot function close
 });
 
 // login Discord
